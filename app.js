@@ -6,8 +6,6 @@ const token = 'MzI4MjM2OTQ3ODIwNzczMzg2.DDIgsw.WH07ZgokdvsY8szEW94ZiUfqp7M';
 // https://discordapp.com/oauth2/authorize?&client_id=328236947820773386&scope=bot&permissions=0
 
 // Global Vars
-// Test
-// Test
 
 client.on('ready', () => {
   console.log('Ready....');
