@@ -1,0 +1,14 @@
+{
+  "name": "WaldyBot",
+  "version": "1.0.0",
+  "description": "WaldyBot",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "discord.js": "*"
+  },
+  "author": "Jeffrey Bodin",
+  "license": "ISC"
+}
