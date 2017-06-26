@@ -7,7 +7,6 @@ const token = 'MzI4MjM2OTQ3ODIwNzczMzg2.DDIgsw.WH07ZgokdvsY8szEW94ZiUfqp7M';
 
 // Global Vars
 
-
 client.on('ready', () => {
   console.log('Ready....');
   }
