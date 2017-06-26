@@ -41,4 +41,4 @@ client.on('message', message => {
 });
 
 // WaldyBot Login Token Goes Here: For local testing use tokenBeta.
-client.login(token).listen(process.env.PORT);
+client.login(token);
