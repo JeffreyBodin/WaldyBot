@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const coolAscii = require('cool-ascii-faces');
 const client = new Discord.Client();
+const webHookConstructor = new Discord.WebhookClient('webhook id', 'webhook token');
 const token = 'MzI4MjM2OTQ3ODIwNzczMzg2.DDIgsw.WH07ZgokdvsY8szEW94ZiUfqp7M'; // WaldyBot
 const tokenBeta = 'MzI4OTUwODE2ODY4MTM5MDE5.DDLW1Q.Jemr2DRo5Z63idqOBIvTKl2EWhw'; // WaldyBot Beta
 
@@ -36,13 +37,19 @@ var copyPastaObj = {
   imsyliris: 'I’m Syliris and this is my syphilis. I work here with my STD’s and my boosted teammates, Jordan and The Argonauts, and in 5 months I’ve learned one thing. You never know what is gonna come through that champ select.'
 }
 
-// WaldyBot's Current Game
-var botIsPlaying = 'To get help: ' + 'w help';
 
 // Startup
 client.on('ready', () => {
   console.log('Ready....');
-  }
+}
+);
+
+// WaldyBot's Current Game
+var botIsPlaying = 'w help';
+
+client.on('ready', () => {
+  client.user.setGame(botIsPlaying);
+}
 );
 
 // Command Descriptions/Declarations
@@ -131,4 +138,3 @@ client.on('message', message => {
 
 // WaldyBot Login Token Goes Here: For local testing use tokenBeta.
 client.login(token);
-client.SetGame(botIsPlaying);
