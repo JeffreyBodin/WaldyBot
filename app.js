@@ -36,6 +36,9 @@ var copyPastaObj = {
   imsyliris: 'I’m Syliris and this is my syphilis. I work here with my STD’s and my boosted teammates, Jordan and The Argonauts, and in 5 months I’ve learned one thing. You never know what is gonna come through that champ select.'
 }
 
+// WaldyBot's Current Game
+var botIsPlaying = 'To get help: ' + 'w help';
+
 // Startup
 client.on('ready', () => {
   console.log('Ready....');
@@ -128,3 +131,4 @@ client.on('message', message => {
 
 // WaldyBot Login Token Goes Here: For local testing use tokenBeta.
 client.login(token);
+client.SetGame(botIsPlaying);
