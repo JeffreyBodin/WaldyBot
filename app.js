@@ -32,6 +32,9 @@ var asciiObj = {
   dieadodger: '༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽You either die a DODGER, or fill long enough to become the SUPPORT༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽',
   feeding: 'ᕙ༼ຈل͜ຈ༽ᕗ. FEEDING,﻿ FEEDING, FEEDING, FEEDING.ᕙ༼ຈل͜ຈ༽ᕗ' 
 }
+var copyPastaObj = {
+  imsyliris: 'I’m Syliris and this is my syphilis. I work here with my STD’s and my boosted teammates, Jordan and The Argonauts, and in 5 months I’ve learned one thing. You never know what is gonna come through that champ select.'
+}
 
 // Startup
 client.on('ready', () => {
@@ -46,9 +49,12 @@ var cmdPing = 'w ' + 'ping';
 var cmdPingHelp = 'w ping\n\t ' + 'Checks my current online/offline status.';
 var cmdCoolAscii = 'w ' + 'ascii';
 var cmdCoolAsciiHelp = 'w ascii\n\t ' + 'Returns a randomized Ascii face.ヽ༼ຈل͜ຈ༽ﾉ\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: @mention, deal with it, raise your dongers, syphilis, $, mo\' money, hadouken, dongerhood, die a dodger, feeding';
+var cmdCopyPasta = 'w ' + 'copypasta';
+var cmdCopyPastaHelp = 'w copypasta\n\t ' + 'Returns copypastas.\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: im syliris';
+
 
 // Help File
-var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + '```';
+var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + cmdCopyPastaHelp + '\n ' + '```';
 
 // Help Commands
 client.on('message', message => {
@@ -113,7 +119,12 @@ client.on('message', message => {
     message.channel.send(asciiObj.feeding);
   }  
 });
-
+// Copypastas Keywrods/Phrases
+client.on('message', message => {
+  if(message.content === cmdCopyPasta + ' ' + 'im syliris') {
+    message.channel.send(copyPastaObj.imsyliris);
+  } 
+});
 
 // WaldyBot Login Token Goes Here: For local testing use tokenBeta.
 client.login(token);
