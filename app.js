@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const coolAscii = require('cool-ascii-faces');
 const client = new Discord.Client();
-const webHookConstructor = new Discord.WebhookClient('webhook id', 'webhook token');
-const token = 'MzI4MjM2OTQ3ODIwNzczMzg2.DDIgsw.WH07ZgokdvsY8szEW94ZiUfqp7M'; // WaldyBot
-const tokenBeta = 'MzI4OTUwODE2ODY4MTM5MDE5.DDLW1Q.Jemr2DRo5Z63idqOBIvTKl2EWhw'; // WaldyBot Beta
+const authToken = 'MzI4MjM2OTQ3ODIwNzczMzg2.DDIgsw.WH07ZgokdvsY8szEW94ZiUfqp7M'; // WaldyBot
+const authTokenBeta = 'MzI4OTUwODE2ODY4MTM5MDE5.DDLW1Q.Jemr2DRo5Z63idqOBIvTKl2EWhw'; // WaldyBot Beta
+const hook = new Discord.WebhookClient();
 
 
 process.setMaxListeners(0);
@@ -51,6 +51,8 @@ client.on('ready', () => {
   client.user.setGame(botIsPlaying);
 }
 );
+
+// Webhooks
 
 // Command Descriptions/Declarations
 var cmdHelp = 'w ' + 'help';
@@ -135,6 +137,12 @@ client.on('message', message => {
     message.channel.send(copyPastaObj.imsyliris);
   } 
 });
+// Webhooks TestCmds
+client.on('message', message => {
+  if(message.content === 'w ' + 'webhook test') {
+   message.channel.send('under construction');
+  } 
+});
 
 // WaldyBot Login Token Goes Here: For local testing use tokenBeta.
-client.login(token);
+client.login(authTokenBeta);
