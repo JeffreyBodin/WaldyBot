@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const coolAscii = require('cool-ascii-faces');
+const ASCIIObj = require('./Objects/ASCIIObj');
 const client = new Discord.Client();
 const authToken = 'MzI4MjM2OTQ3ODIwNzczMzg2.DDIgsw.WH07ZgokdvsY8szEW94ZiUfqp7M'; // WaldyBot
 const authTokenBeta = 'MzI4OTUwODE2ODY4MTM5MDE5.DDLW1Q.Jemr2DRo5Z63idqOBIvTKl2EWhw'; // WaldyBot Beta
@@ -24,15 +25,7 @@ var waldyBotBeta = {
   username: 'WaldyBot Beta',
   discriminator: '7163'
 }
-var asciiObj = {
-  syphilis: '༼ つ ◕_◕ ༽つ SYLIRUS GIVE ME SYPHILIS ༼ つ ◕_◕ ༽つ',
-  $: '[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅] CASH MONEY [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]',
-  momoney: '[̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅] Mo\' money, mo\' Dongers [̲̅$̲̅(̲̅ ͡° ͜ʖ ͡°̲̅)̲̅$̲̅]',
-  hadouken: '༼つಠ益ಠ༽つ ─=≡ΣO)) HADOUKEN',
-  dongerhood: '༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽YOU CAME TO THE WRONG DONGERHOOD༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽',
-  dieadodger: '༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽You either die a DODGER, or fill long enough to become the SUPPORT༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽',
-  feeding: 'ᕙ༼ຈل͜ຈ༽ᕗ. FEEDING,﻿ FEEDING, FEEDING, FEEDING.ᕙ༼ຈل͜ຈ༽ᕗ' 
-}
+
 var copyPastaObj = {
   imsyliris: 'I’m Syliris and this is my syphilis. I work here with my STD’s and my boosted teammates, Jordan and The Argonauts, and in 5 months I’ve learned one thing. You never know what is gonna come through that champ select.'
 }
@@ -110,25 +103,25 @@ client.on('message', message => {
     message.channel.send(coolAscii.faces[35]);
   }
   if(message.content === cmdCoolAscii + ' ' + 'syphilis') {
-    message.channel.send(asciiObj.syphilis);
+    message.channel.send(ASCIIObj.asciiObjs.syphilis);
   }
   if(message.content === cmdCoolAscii + ' ' + '$') {
-    message.channel.send(asciiObj.$);
+    message.channel.send(ASCIIObj.asciiObjs.$);
   }
   if(message.content === cmdCoolAscii + ' ' + 'mo\' money') {
-    message.channel.send(asciiObj.momoney);
+    message.channel.send(ASCIIObj.asciiObjs.momoney);
   }
   if(message.content === cmdCoolAscii + ' ' + 'hadouken') {
-    message.channel.send(asciiObj.hadouken);
+    message.channel.send(ASCIIObj.asciiObjs.hadouken);
   }
   if(message.content === cmdCoolAscii + ' ' + 'dongerhood') {
-    message.channel.send(asciiObj.dongerhood);
+    message.channel.send(ASCIIObj.asciiObjs.dongerhood);
   }
   if(message.content === cmdCoolAscii + ' ' + 'die a dodger') {
-    message.channel.send(asciiObj.dieadodger);
+    message.channel.send(ASCIIObj.asciiObjs.dieadodger);
   }
   if(message.content === cmdCoolAscii + ' ' + 'feeding') {
-    message.channel.send(asciiObj.feeding);
+    message.channel.send(ASCIIObj.asciiObjs.feeding);
   }  
 });
 // Copypastas Keywrods/Phrases
