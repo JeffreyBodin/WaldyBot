@@ -3,17 +3,21 @@ const client = new Discord.Client();
 const coolAscii = require('cool-ascii-faces');
 const asciiObjs = require('./Objects/ASCIIObjects.js');
 const copyPastaObjs = require('./Objects/CopyPastaObjects.js');
-const authFile = require('./Objects/Auth.js');
+const helpObjs = require('./Objects/HelpObjects.js');
+const globalVarsObjs = require('./Objects/GlobalVarsObjects.js');
+const helpCommand = require('./Commands/HelpCommand.js');
+const setupCommand = require('./Commands/SetupCommand.js');
+const pingCommand = require('./Commands/PingCommand.js');
 const hook = new Discord.WebhookClient();
 
 process.setMaxListeners(0);
 
 
 // Global Vars
-const waldyBot = authFile.waldyBot;
-const waldyBotBeta = authFile.waldyBotBeta;
-const authToken = authFile.object1.DiscordToken; // WaldyBot
-const authTokenBeta = authFile.object1.DiscordTokenBeta; // WaldyBot Beta
+const waldyBot = globalVarsObjs.globalVarObject.waldyBot;
+const waldyBotBeta = globalVarsObjs.globalVarObject.waldyBotBeta;
+const authToken = globalVarsObjs.authenticationObject.authToken; // WaldyBot
+const authTokenBeta = globalVarsObjs.authenticationObject.authTokenBeta; // WaldyBot Beta
 
 
 // Startup
@@ -32,57 +36,20 @@ client.on('ready', () => {
 
 // Webhooks
 
-// Command Descriptions/Declarations
-var cmdHelp = 'w ' + 'help';
-var cmdHelpHelp = 'w help\n\t ' + 'Requests my command list.';
-var cmdSetUp = 'w ' + 'setup';
-var cmdSetUpHelp = 'w setup\n\t ' + 'Requests my setup information.';
-var cmdSetUpInstallHelp = 'w setup install\n\t ' + 'Requests my server authentication url. Used by server owners/admins.\n\t ' + 'Go to the recieved url to add me to your server.';
-var cmdPing = 'w ' + 'ping';
-var cmdPingHelp = 'w ping\n\t ' + 'Checks my current online/offline status.';
-var cmdCoolAscii = 'w ' + 'ascii';
-var cmdCoolAsciiHelp = 'w ascii\n\t ' + 'Returns a randomized Ascii face.ヽ༼ຈل͜ຈ༽ﾉ\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: @mention, deal with it, raise your dongers, syphilis, $, mo\' money, hadouken, dongerhood, die a dodger, feeding';
-var cmdCopyPasta = 'w ' + 'copypasta';
-var cmdCopyPastaHelp = 'w copypasta\n\t ' + 'Returns copypastas.\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: im syliris';
+// Command Vars w/Help Descriptions;
+var cmdCoolAscii = helpObjs.cmdVarObject.cmdCoolAscii;
+var cmdCoolAsciiHelp = helpObjs.cmdVarObject.cmdCoolAsciiHelp;
+var cmdCopyPasta = helpObjs.cmdVarObject.cmdCopyPasta;
+var cmdCopyPastaHelp = helpObjs.cmdVarObject.cmdCopyPastaHelp;
 
-
-// Help File
-var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdSetUpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + cmdCopyPastaHelp + '\n ' + '```';
-var setUpFile = '```javascript\n' + '// This is my setup information.\n ' + 'All commands are prefixed by a \'w\' and a single space along with setup keyword.\n ' + cmdSetUpHelp  + '\n ' + cmdSetUpInstallHelp + '\n ' + '```';
 
 // Commands:
 // Help
-client.on('message', message => {
-  if(message.content === cmdHelp) {
-    message.author.createDM(message.author.send(helpFile));
-    };
-  } 
-);
-client.on('message', message => {
-  if (message.isMemberMentioned(waldyBot) === true) { 
-    message.author.createDM(message.author.send(helpFile));
-  };
-  if (message.isMemberMentioned(waldyBotBeta) === true) { 
-    message.author.createDM(message.author.send(helpFile));
-  };
-});
+helpCommand.helpFileResponsesObject.helpFileResponsesObjectMethod(client);
 // Setup
-client.on('message', message => {
-  if(message.content === cmdSetUp) {
-    message.author.createDM(message.author.send(setUpFile));
-  }
-});
-client.on('message', message => {
-  if(message.content === cmdSetUp + ' ' + 'install') {
-    message.author.createDM(message.author.send(authFile.waldyBotAuthUrlObj.waldyBotAuthUrlString));
-  }
-});
+setupCommand.setUpResponsesObject.setUpResponsesMethod(client);
 // Ping/Pong Server Check
-client.on('message', message => {
-  if(message.content === cmdPing) {
-    message.channel.send('pong');
-  }
-});
+pingCommand.pingResponsesObject.pingResponsesMethod(client);
 // Cool-Ascii-Face Randomized
 client.on('message', message => {
   if(message.content === cmdCoolAscii) {
@@ -122,7 +89,7 @@ client.on('message', message => {
     message.channel.send(asciiObjs.feeding);
   }  
 });
-// Copypastas Keywrods/Phrases
+// Copypastas Keywords/Phrases
 client.on('message', message => {
   if(message.content === cmdCopyPasta + ' ' + 'im syliris') {
     message.channel.send(copyPastaObjs.imsyliris);
