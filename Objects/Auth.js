@@ -17,7 +17,6 @@ var waldyBotBeta = {
 // Returns link to authenticate WaldyBot on a new server.
 function discordServerAuthenticate(client_id, username) {
     var address = 'https://discordapp.com/oauth2/authorize?&client_id=' + client_id + '&scope=bot&permissions=0';
-    https://discordapp.com/oauth2/authorize?
     function addressObj() {
         return this[username] = address;
         //return this[username];
