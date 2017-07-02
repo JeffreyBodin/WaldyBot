@@ -13,19 +13,16 @@ process.setMaxListeners(0);
 
 
 // Global Vars
-var packageJson = { };
-fs.readFile('./package.json', function(data){
-  return packageJson = data; 
-});
-const waldyBotVersion = packageJson["version"];
+var packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+var waldyBotVersion = packageJson["version"];
 const authToken = globalVarsObjs.authenticationObject.authToken; // WaldyBot
 const authTokenBeta = globalVarsObjs.authenticationObject.authTokenBeta; // WaldyBot Beta
 
 
 // Startup
 client.on('ready', () => {
-  console.log('Ready....');
-  console.log(waldyBotVersion);
+  console.log('v' + waldyBotVersion);
+  console.log('Ready....'); 
 }
 );
 
