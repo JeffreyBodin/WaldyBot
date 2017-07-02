@@ -1,21 +1,23 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const coolAscii = require('cool-ascii-faces');
-const asciiObjs = require('./Objects/ASCIIObjects.js');
-const copyPastaObjs = require('./Objects/CopyPastaObjects.js');
-const helpObjs = require('./Objects/HelpObjects.js');
+const fs = require('fs');
 const globalVarsObjs = require('./Objects/GlobalVarsObjects.js');
 const helpCommand = require('./Commands/HelpCommand.js');
 const setupCommand = require('./Commands/SetupCommand.js');
 const pingCommand = require('./Commands/PingCommand.js');
-const hook = new Discord.WebhookClient();
+const coolAsciiFaceCommand = require('./Commands/CoolAsciiFaceCommand.js');
+const copyPastaCommand = require('./Commands/CopyPastaCommand.js');
+const hook = new Discord.WebhookClient(); // placeholder
 
 process.setMaxListeners(0);
 
 
 // Global Vars
-const waldyBot = globalVarsObjs.globalVarObject.waldyBot;
-const waldyBotBeta = globalVarsObjs.globalVarObject.waldyBotBeta;
+var packageJson = { };
+fs.readFile('./package.json', function(data){
+  return packageJson = data; 
+});
+const waldyBotVersion = packageJson["version"];
 const authToken = globalVarsObjs.authenticationObject.authToken; // WaldyBot
 const authTokenBeta = globalVarsObjs.authenticationObject.authTokenBeta; // WaldyBot Beta
 
@@ -23,6 +25,7 @@ const authTokenBeta = globalVarsObjs.authenticationObject.authTokenBeta; // Wald
 // Startup
 client.on('ready', () => {
   console.log('Ready....');
+  console.log(waldyBotVersion);
 }
 );
 
@@ -34,14 +37,7 @@ client.on('ready', () => {
 }
 );
 
-// Webhooks
-
-// Command Vars w/Help Descriptions;
-var cmdCoolAscii = helpObjs.cmdVarObject.cmdCoolAscii;
-var cmdCoolAsciiHelp = helpObjs.cmdVarObject.cmdCoolAsciiHelp;
-var cmdCopyPasta = helpObjs.cmdVarObject.cmdCopyPasta;
-var cmdCopyPastaHelp = helpObjs.cmdVarObject.cmdCopyPastaHelp;
-
+// Webhooks (placeholder)
 
 // Commands:
 // Help
@@ -51,50 +47,11 @@ setupCommand.setUpResponsesObject.setUpResponsesMethod(client);
 // Ping/Pong Server Check
 pingCommand.pingResponsesObject.pingResponsesMethod(client);
 // Cool-Ascii-Face Randomized
-client.on('message', message => {
-  if(message.content === cmdCoolAscii) {
-    message.send(coolAscii());
-  } 
-});
+coolAsciiFaceCommand.coolAsciiRandomizedObject.coolAsciiRandomized(client);
 // Cool-Ascii-Face Keywords/Phrases
-client.on('message', message => {
-  if(message.content === cmdCoolAscii + ' ' + message.mentions.users.first()) {
-    message.mentions.users.first().createDM(message.mentions.users.first().send(coolAscii()));
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'deal with it') {
-    message.channel.send(coolAscii.faces[36]);
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'raise your dongers') {
-    message.channel.send(coolAscii.faces[35]);
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'syphilis') {
-    message.channel.send(asciiObjs.syphilis);
-  }
-  if(message.content === cmdCoolAscii + ' ' + '$') {
-    message.channel.send(asciiObjs.$);
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'mo\' money') {
-    message.channel.send(asciiObjs.momoney);
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'hadouken') {
-    message.channel.send(asciiObjs.hadouken);
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'dongerhood') {
-    message.channel.send(asciiObjs.dongerhood);
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'die a dodger') {
-    message.channel.send(asciiObjs.dieadodger);
-  }
-  if(message.content === cmdCoolAscii + ' ' + 'feeding') {
-    message.channel.send(asciiObjs.feeding);
-  }  
-});
+coolAsciiFaceCommand.coolAsciiKeywordsPhrasesObject.coolAsciiKeywordsPhrases(client);
 // Copypastas Keywords/Phrases
-client.on('message', message => {
-  if(message.content === cmdCopyPasta + ' ' + 'im syliris') {
-    message.channel.send(copyPastaObjs.imsyliris);
-  } 
-});
+copyPastaCommand.copyPastaKeywordsPhrasesObject.copyPastaKeywordsPhrases(client);
 // Webhooks TestCmds
 client.on('message', message => {
   if(message.content === 'w ' + 'webhook test') {
@@ -102,5 +59,5 @@ client.on('message', message => {
   } 
 });
 
-// WaldyBot Login Token Goes Here: For local testing use tokenBeta.
+// WaldyBot Login Token Goes Here: For local testing use authTokenBeta.
 client.login(authToken);

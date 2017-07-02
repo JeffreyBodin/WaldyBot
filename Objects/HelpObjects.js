@@ -7,7 +7,7 @@ var cmdSetUpInstallHelp = 'w setup install\n\t ' + 'Requests my server authentic
 var cmdPing = 'w ' + 'ping';
 var cmdPingHelp = 'w ping\n\t ' + 'Checks my current online/offline status.';
 var cmdCoolAscii = 'w ' + 'ascii';
-var cmdCoolAsciiHelp = 'w ascii\n\t ' + 'Returns a randomized Ascii face.ヽ༼ຈل͜ຈ༽ﾉ\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: @mention, deal with it, raise your dongers, syphilis, $, mo\' money, hadouken, dongerhood, die a dodger, feeding';
+var cmdCoolAsciiHelp = 'w ascii\n\t ' + 'Returns a randomized Ascii face.ヽ༼ຈل͜ຈ༽ﾉ\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: @mention, deal with it, raise your dongers, syphilis, $, mo money, hadouken, dongerhood, die a dodger, feeding';
 var cmdCopyPasta = 'w ' + 'copypasta';
 var cmdCopyPastaHelp = 'w copypasta\n\t ' + 'Returns copypastas.\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: im syliris';
 
