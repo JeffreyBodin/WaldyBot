@@ -7,7 +7,7 @@ var cmdPing = globalVarsObjs.commandVarObject.cmdPing;
 // pingResponsesObject's Method
 var pingResponsesMethod = function(client) {
     client.on('message', message => {
-        if(message.content === cmdPing) {
+        if(message.content.toLowerCase() === cmdPing) {
             message.channel.send('pong');
         }
     });    

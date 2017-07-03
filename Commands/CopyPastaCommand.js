@@ -8,7 +8,7 @@ var copyPastaObjs = globalVarsObjs.otherObject.copyPastaObjs;
 // Copypastas Keywords/Phrases
 var copyPastaKeywordsPhrases = function(client) {
     client.on('message', message => {
-        if(message.content === cmdCopyPasta + ' ' + 'im syliris') {
+        if(message.content.toLowerCase() === cmdCopyPasta + ' ' + 'im syliris') {
             message.channel.send(copyPastaObjs.imsyliris);
         } 
     });

@@ -1,4 +1,4 @@
-const globalVarsObjs = require('../Objects/GlobalVarsObjects.js');
+const globalVarsObjs =  require('../Objects/GlobalVarsObjects.js');
 
 
 var cmdYoutube = globalVarsObjs.commandVarObject.cmdYoutube;

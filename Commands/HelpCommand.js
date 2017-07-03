@@ -9,7 +9,7 @@ var helpFile = globalVarsObjs.filesObject.helpFile;
 // helpFileResponsesObject's Method
 var helpFileResponsesObjectMethod = function(client) {
     client.on('message', message => {
-        if(message.content === cmdHelp) {
+        if(message.content.toLowerCase() === cmdHelp) {
             message.author.createDM(message.author.send(helpFile));
         };
     });

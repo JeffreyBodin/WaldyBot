@@ -21,6 +21,8 @@ var cmdCoolAscii = helpObjs.cmdVarObject.cmdCoolAscii;
 var cmdCoolAsciiHelp = helpObjs.cmdVarObject.cmdCoolAsciiHelp;
 var cmdCopyPasta = helpObjs.cmdVarObject.cmdCopyPasta;
 var cmdCopyPastaHelp = helpObjs.cmdVarObject.cmdCopyPastaHelp;
+var cmdYoutube = helpObjs.cmdVarObject.cmdYoutube;
+var cmdYoutubeHelp = helpObjs.cmdVarObject.cmdYoutubeHelp;
 
 // Help Files - Contains strings that are DM'd to user on request for help.
 var helpFile = helpObjs.helpFilesObject.helpFile;
@@ -65,7 +67,9 @@ var commandVarObject = {
     cmdCoolAscii: cmdCoolAscii,
     cmdCoolAsciiHelp: cmdCoolAsciiHelp,
     cmdCopyPasta: cmdCopyPasta,
-    cmdCopyPastaHelp: cmdCopyPastaHelp  
+    cmdCopyPastaHelp: cmdCopyPastaHelp, 
+    cmdYoutube: cmdYoutube,
+    cmdYoutubeHelp: cmdYoutubeHelp 
 }
 
 var exportobject = {
