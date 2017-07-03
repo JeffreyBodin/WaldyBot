@@ -2,7 +2,7 @@ const globalVarsObjs = require('../Objects/GlobalVarsObjects.js');
 
 
 var cmdCopyPasta = globalVarsObjs.commandVarObject.cmdCopyPasta;
-var copyPastaObjs = globalVarsObjs.otherObject.copyPastaObjsObjs;
+var copyPastaObjs = globalVarsObjs.otherObject.copyPastaObjs;
 
 // CopyPasta Responses
 // Copypastas Keywords/Phrases

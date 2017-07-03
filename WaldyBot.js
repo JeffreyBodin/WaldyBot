@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const richEmbed = new Discord.RichEmbed({ });
 const fs = require('fs');
 const globalVarsObjs = require('./Objects/GlobalVarsObjects.js');
 const helpCommand = require('./Commands/HelpCommand.js');
@@ -7,6 +8,7 @@ const setupCommand = require('./Commands/SetupCommand.js');
 const pingCommand = require('./Commands/PingCommand.js');
 const coolAsciiFaceCommand = require('./Commands/CoolAsciiFaceCommand.js');
 const copyPastaCommand = require('./Commands/CopyPastaCommand.js');
+const youtubeCommand = require('./Commands/YoutubeCommand.js');
 const hook = new Discord.WebhookClient(); // placeholder
 
 process.setMaxListeners(0);
@@ -49,6 +51,8 @@ coolAsciiFaceCommand.coolAsciiRandomizedObject.coolAsciiRandomized(client);
 coolAsciiFaceCommand.coolAsciiKeywordsPhrasesObject.coolAsciiKeywordsPhrases(client);
 // Copypastas Keywords/Phrases
 copyPastaCommand.copyPastaKeywordsPhrasesObject.copyPastaKeywordsPhrases(client);
+// Youtube Commands
+youtubeCommand.youtubeKeywordsPhrasesObject.youtubeKeywordsPhrases(client);
 // Webhooks TestCmds
 client.on('message', message => {
   if(message.content === 'w ' + 'webhook test') {

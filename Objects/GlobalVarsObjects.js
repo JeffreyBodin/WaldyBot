@@ -2,6 +2,7 @@ const authFile = require('./Auth.js');
 const helpObjs = require('./HelpObjects.js');
 const asciiObjs = require('./ASCIIObjects.js');
 const copyPastaObjs = require('./CopyPastaObjects.js');
+const youtubeObjs = require('./YoutubeObjects.js');
 
 
 // Global Vars
@@ -21,7 +22,7 @@ var cmdCoolAsciiHelp = helpObjs.cmdVarObject.cmdCoolAsciiHelp;
 var cmdCopyPasta = helpObjs.cmdVarObject.cmdCopyPasta;
 var cmdCopyPastaHelp = helpObjs.cmdVarObject.cmdCopyPastaHelp;
 
-// Help Files
+// Help Files - Contains strings that are DM'd to user on request for help.
 var helpFile = helpObjs.helpFilesObject.helpFile;
 var setUpFile = helpObjs.helpFilesObject.setUpFile;
 
@@ -29,10 +30,6 @@ var setUpFile = helpObjs.helpFilesObject.setUpFile;
 var waldyBotAuthUrl = authFile.waldyBotAuthUrlObj.waldyBotAuthUrlString;
 var authToken = authFile.discordTokensObject.DiscordToken; // WaldyBot
 var authTokenBeta = authFile.discordTokensObject.DiscordTokenBeta; // WaldyBot Beta
-
-// Other Objects
-var asciiObjsObjs = asciiObjs.asciiObject;
-var copyPastaObjsObjs = copyPastaObjs.copyPastaObject;
 
 // Objects
 var globalVarObject = {
@@ -46,8 +43,9 @@ var filesObject = {
 }
 
 var otherObject = {
-    asciiObjsObjs: asciiObjsObjs,
-    copyPastaObjsObjs: copyPastaObjsObjs
+    asciiObjs: asciiObjs.asciiObject,
+    copyPastaObjs: copyPastaObjs.copyPastaObject,
+    youtubeObjs: youtubeObjs.youtubeVideoObjects,
 }
 
 var authenticationObject = {

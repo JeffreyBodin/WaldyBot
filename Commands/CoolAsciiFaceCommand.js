@@ -3,7 +3,7 @@ const globalVarsObjs = require('../Objects/GlobalVarsObjects.js');
 
 
 var cmdCoolAscii = globalVarsObjs.commandVarObject.cmdCoolAscii;
-var asciiObjs = globalVarsObjs.otherObject.asciiObjsObjs;
+var asciiObjs = globalVarsObjs.otherObject.asciiObjs;
 
 // Ascii Responses
 // Cool-Ascii-Face Randomized
