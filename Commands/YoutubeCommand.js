@@ -8,7 +8,7 @@ var youtubeObjs = globalVarsObjs.otherObject.youtubeObjs;
 // Youtube Keywords/Phrases
 var youtubeKeywordsPhrases = function(client) {
     client.on('message', message => {
-        if(message.content.toLowerCase() === cmdYoutube + 'boneless pizza') {
+        if(message.content.toLowerCase() === cmdYoutube + ' ' + 'boneless pizza') {
             message.channel.send(youtubeObjs.bonelesspizza.url);
         } 
     });
