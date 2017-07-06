@@ -53,6 +53,10 @@ coolAsciiFaceCommand.coolAsciiKeywordsPhrasesObject.coolAsciiKeywordsPhrases(cli
 copyPastaCommand.copyPastaKeywordsPhrasesObject.copyPastaKeywordsPhrases(client);
 // Youtube Commands
 youtubeCommand.youtubeKeywordsPhrasesObject.youtubeKeywordsPhrases(client);
+
+
+
+
 // Webhooks TestCmds
 client.on('message', message => {
   if(message.content === 'w ' + 'webhook test') {
@@ -61,4 +65,4 @@ client.on('message', message => {
 });
 
 // WaldyBot Login Token Goes Here: For local testing use authTokenBeta.
-client.login(authToken);
+client.login(authTokenBeta);
