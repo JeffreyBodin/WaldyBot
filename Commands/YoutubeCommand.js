@@ -1,27 +1,27 @@
 const globalVarsObjs =  require('../Objects/GlobalVarsObjects.js');
 const fs = require('fs');
+var util = require('util');
 const google = require('googleapis');
 var waldyBotOAuth = JSON.parse(fs.readFileSync('./Objects/GoogleApi/clientsecret.json', 'utf8'));
+var gcloud = require('google-cloud')({
+  projectId: 'WaldyBot',
+  keyFilename: './Objects/GoogleApi/keyfile.json'
+});
 
-
-var clientid = waldyBotOAuth["client_id"];
+/*var clientid = waldyBotOAuth["client_id"];
 var clientsecret = waldyBotOAuth["client_secret"];
 var redirecturis = waldyBotOAuth["redirect_uris"];
-
-
 var OAuth2 = google.auth.OAuth2;
 var oauth2Client = new OAuth2(
   waldyBotOAuth["client_id"],
   waldyBotOAuth["client_secret"],
   waldyBotOAuth["redirect_uris"]
-);
+);*/
 
 var youtube = google.youtube({
   version: 'v3',
   auth: 'AIzaSyDVY71s-EYABgcxoiE8Vt7py7RlYTdEIyc' // If 'key' doesn't work replace with 'auth'.
 });
-
-youtube
 
 /*// set auth as a global default
 google.options({
@@ -38,54 +38,44 @@ var youtubeKeywordsPhrases = function(client) {
     client.on('message', message => {
         if(message.content.toLowerCase() === cmdYoutube + ' ' + 'boneless pizza') {
             message.channel.send(youtubeObjs.bonelesspizza.url);
-        } 
+        }   
     });
 }
 
 // Youtube Search
-// After the API loads, call a function to enable the search box.
-function handleAPILoaded() {
-  $('#search-button').attr('disabled', false);
+// a very simple example of searching for youtube videos
+var youtubeSearch = function(client) {
+    client.on('message', message => {
+        if (message.content.toLowerCase() === cmdYoutube + ' ' + 's')
+            message.content.send();
+        }
+    );
+} 
+
+
+function runSamples() {
+  youtube.search.list({
+    part: 'id,snippet',
+    q: 'Node.js on Google Cloud'
+  }, function (err, data) {
+    if (err) {
+      console.error('Error: ' + err);
+    }
+    if (data) {
+      console.log(util.inspect(data, false, null));
+    }
+    process.exit();
+  });
 }
 
-// Search for a specified string.
-function search() {
-  var q = $('#query').val();
-  var request = gapi.client.youtube.search.list({
-    q: q,
-    part: 'snippet'
-  });
-
-  request.execute(function(response) {
-    var str = JSON.stringify(response.result);
-    $('#search-container').html('<pre>' + str + '</pre>');
-  });
-}
-search.js
-
-
-// Request to youtube's api see: https://developers.google.com/youtube/v3/docs/search/list#try-it.
-/* buildApiRequest('GET',
-                '/youtube/v3/search',
-                {'maxResults': '25',
-                 'part': 'snippet',
-                 'q': 'surfing',
-                 'type': ''});
-*/
-// Response obj  returned by above request.
-/*{
-  kind: "youtube#searchListResponse",
-  etag: etag,
-  nextPageToken: string,
-  prevPageToken: string,
-  regionCode: string,
-  pageInfo: {totalResults: integer, resultsPerPage: integer},
-  items: [search Resource]
-}*/
+var scopes = [
+  'https://www.googleapis.com/auth/youtube'
+];
 
 // Objects
 var youtubeKeywordsPhrasesObject = {
-    youtubeKeywordsPhrases: youtubeKeywordsPhrases
+    youtubeKeywordsPhrases: youtubeKeywordsPhrases,
+
 }
 
 var exportobject = {

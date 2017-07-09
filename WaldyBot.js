@@ -54,9 +54,6 @@ copyPastaCommand.copyPastaKeywordsPhrasesObject.copyPastaKeywordsPhrases(client)
 // Youtube Commands
 youtubeCommand.youtubeKeywordsPhrasesObject.youtubeKeywordsPhrases(client);
 
-youtubeCommand
-
-
 
 // Webhooks TestCmds
 client.on('message', message => {
