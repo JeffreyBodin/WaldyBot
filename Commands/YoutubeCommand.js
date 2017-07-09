@@ -1,26 +1,34 @@
 const globalVarsObjs =  require('../Objects/GlobalVarsObjects.js');
-const google = require('googleapis');
 const fs = require('fs');
-
+const google = require('googleapis');
 var waldyBotOAuth = JSON.parse(fs.readFileSync('./Objects/GoogleApi/clientsecret.json', 'utf8'));
+
+
 var clientid = waldyBotOAuth["client_id"];
 var clientsecret = waldyBotOAuth["client_secret"];
 var redirecturis = waldyBotOAuth["redirect_uris"];
-var OAuth2 = google.auth.OAuth2;
 
+
+var OAuth2 = google.auth.OAuth2;
 var oauth2Client = new OAuth2(
   waldyBotOAuth["client_id"],
   waldyBotOAuth["client_secret"],
   waldyBotOAuth["redirect_uris"]
 );
 
-// set auth as a global default
-google.options({
-  auth: oauth2Client
+var youtube = google.youtube({
+  version: 'v3',
+  auth: 'AIzaSyDVY71s-EYABgcxoiE8Vt7py7RlYTdEIyc' // If 'key' doesn't work replace with 'auth'.
 });
 
+youtube
 
-// const superagent = ('superagent'); note this for later in case
+/*// set auth as a global default
+google.options({
+  auth: oauth2Client
+});*/
+
+
 var cmdYoutube = globalVarsObjs.commandVarObject.cmdYoutube;
 var youtubeObjs = globalVarsObjs.otherObject.youtubeObjs;
 

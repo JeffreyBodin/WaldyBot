@@ -54,6 +54,7 @@ copyPastaCommand.copyPastaKeywordsPhrasesObject.copyPastaKeywordsPhrases(client)
 // Youtube Commands
 youtubeCommand.youtubeKeywordsPhrasesObject.youtubeKeywordsPhrases(client);
 
+youtubeCommand
 
 
 
