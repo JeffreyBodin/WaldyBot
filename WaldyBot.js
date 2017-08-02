@@ -13,7 +13,6 @@ const hook = new Discord.WebhookClient(); // placeholder
 
 process.setMaxListeners(0);
 
-
 // Global Vars
 var packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
 var waldyBotVersion = packageJson["version"];
@@ -52,7 +51,8 @@ coolAsciiFaceCommand.coolAsciiKeywordsPhrasesObject.coolAsciiKeywordsPhrases(cli
 // Copypastas Keywords/Phrases
 copyPastaCommand.copyPastaKeywordsPhrasesObject.copyPastaKeywordsPhrases(client);
 // Youtube Commands
-youtubeCommand.youtubeKeywordsPhrasesObject.youtubeKeywordsPhrases(client);
+youtubeCommand.youtubeCmdObject.youtubeKeywordsPhrases(client);
+youtubeCommand.youtubeCmdObject.youtubeSearch(client);
 
 
 // Webhooks TestCmds

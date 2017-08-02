@@ -1,32 +1,14 @@
 const globalVarsObjs =  require('../Objects/GlobalVarsObjects.js');
 const fs = require('fs');
-var util = require('util');
 const google = require('googleapis');
+/* const gapi = require('../Objects/GoogleApi/gapi.js'); */
 var waldyBotOAuth = JSON.parse(fs.readFileSync('./Objects/GoogleApi/clientsecret.json', 'utf8'));
-var gcloud = require('google-cloud')({
-  projectId: 'WaldyBot',
-  keyFilename: './Objects/GoogleApi/keyfile.json'
-});
 
-/*var clientid = waldyBotOAuth["client_id"];
-var clientsecret = waldyBotOAuth["client_secret"];
-var redirecturis = waldyBotOAuth["redirect_uris"];
-var OAuth2 = google.auth.OAuth2;
-var oauth2Client = new OAuth2(
-  waldyBotOAuth["client_id"],
-  waldyBotOAuth["client_secret"],
-  waldyBotOAuth["redirect_uris"]
-);*/
 
 var youtube = google.youtube({
   version: 'v3',
   auth: 'AIzaSyDVY71s-EYABgcxoiE8Vt7py7RlYTdEIyc' // If 'key' doesn't work replace with 'auth'.
 });
-
-/*// set auth as a global default
-google.options({
-  auth: oauth2Client
-});*/
 
 
 var cmdYoutube = globalVarsObjs.commandVarObject.cmdYoutube;
@@ -43,42 +25,61 @@ var youtubeKeywordsPhrases = function(client) {
 }
 
 // Youtube Search
-// a very simple example of searching for youtube videos
 var youtubeSearch = function(client) {
     client.on('message', message => {
-        if (message.content.toLowerCase() === cmdYoutube + ' ' + 's')
-            message.content.send();
+      // set up so that the string from user shown here can be parsed and sent to api. 'w youtube s ' + 'this here'
+      if (message.content.toLowerCase().includes(cmdYoutube + ' ' + 's')) {
+        let squery = message.content.toLowerCase().substring(12);
+        console.log(squery);
+      }
+      if (message.content.toLowerCase() === cmdYoutube + ' ' + 's') {
+        let squery = message.content.toLowerCase().substring(12);
+        console.log(squery);
+      }
+      if (message.content.toLowerCase().includes(cmdYoutube + ' ' + 's')) {
+        let squery = ''; 
+        squery += message.content.toLowerCase().substring(12);
+        onClientLoad();
+
+        function onClientLoad() {
+            google.addAPIs(youtube);
+             onApiLoad();
         }
-    );
-} 
 
+        function onApiLoad() {
+            google.auth('AIzaSyDVY71s-EYABgcxoiE8Vt7py7RlYTdEIyc');
+            search();
+        }
 
-function runSamples() {
-  youtube.search.list({
-    part: 'id,snippet',
-    q: 'Node.js on Google Cloud'
-  }, function (err, data) {
-    if (err) {
-      console.error('Error: ' + err);
-    }
-    if (data) {
-      console.log(util.inspect(data, false, null));
-    }
-    process.exit();
-  });
+        function consoleLog(response) {
+            var responseStringified = JSON.stringify(response, '', 2); 
+            console.log(responseStringified);
+        }
+
+        function onSearchResponse(response) {
+            consoleLog(response);
+        } 
+            // query area set up so that the string from user shown here can be parsed and sent to api. 'w youtube s ' + 'this here'
+        function search() {
+            var request = google.client.youtube.search.list({
+                part: 'snippet',
+                q: squery
+            });
+            // Send the req search to the API server.
+            request.execute(onSearchResponse);
+        }
+      }
+    });
 }
 
-var scopes = [
-  'https://www.googleapis.com/auth/youtube'
-];
-
 // Objects
-var youtubeKeywordsPhrasesObject = {
+var youtubeCmdObject = {
     youtubeKeywordsPhrases: youtubeKeywordsPhrases,
+    youtubeSearch: youtubeSearch
 
 }
 
 var exportobject = {
-    youtubeKeywordsPhrasesObject: youtubeKeywordsPhrasesObject
+    youtubeCmdObject: youtubeCmdObject
 }
 module.exports = exportobject;
