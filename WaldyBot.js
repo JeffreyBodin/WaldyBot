@@ -61,6 +61,6 @@ client.on('message', message => {
    message.channel.send('under construction');
   } 
 });
-
+///
 // WaldyBot Login Token Goes Here: For local testing use authTokenBeta.
-client.login(authTokenBeta);
+client.login(authToken);
