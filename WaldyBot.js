@@ -11,7 +11,8 @@ const copyPastaCommand = require('./Commands/CopyPastaCommand.js');
 const youtubeCommand = require('./Commands/YoutubeCommand.js');
 const hook = new Discord.WebhookClient(); // placeholder
 
-process.setMaxListeners(0);
+process.setMaxListeners(100);
+client.setMaxListeners(100);
 
 // Global Vars
 var packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));

@@ -10,8 +10,8 @@ function discordServerAuthenticate(client_id, username) {
 // Objects
 // Discord Token Object
 var discordTokensObject = {
-    DiscordToken: 'MzI4MjM2OTQ3ODIwNzczMzg2.DDIgsw.WH07ZgokdvsY8szEW94ZiUfqp7M',
-    DiscordTokenBeta: 'MzI4OTUwODE2ODY4MTM5MDE5.DDLW1Q.Jemr2DRo5Z63idqOBIvTKl2EWhw'
+    DiscordToken: 'MzI4MjM2OTQ3ODIwNzczMzg2.DQJ-zw.V16vHlrxNWuLTaEO1xFa8eWR3sA',
+    DiscordTokenBeta: 'MzI4OTUwODE2ODY4MTM5MDE5.DQKCDg.yyUEvw7B3SCxi0EHMOfoeaAkigE'
 }
 // WaldyBot User Objects
 var waldyBot = {

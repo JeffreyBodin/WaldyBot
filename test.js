@@ -7,6 +7,18 @@ var asciiObjs = {
     dieadodger: '༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽You either die a DODGER, or fill long enough to become the SUPPORT༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽',
     feeding: 'ᕙ༼ຈل͜ຈ༽ᕗ. FEEDING,﻿ FEEDING, FEEDING, FEEDING.ᕙ༼ຈل͜ຈ༽ᕗ'
 }
-exports.asciiObjs;
 
-console.log(asciiObjs.$);
+const Discord = require("discord.js");
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', msg => {
+  if (msg.content === 'ping') {
+    msg.reply('Pong!');
+  }
+});
+
+client.login('MzI4MjM2OTQ3ODIwNzczMzg2.DQJ-zw.V16vHlrxNWuLTaEO1xFa8eWR3sA');
