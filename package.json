@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "cool-ascii-faces": "^1.3.4",
-    "discord.js": "*",
+    "discord.js": "^11.2.1",
     "google-cloud": "^0.56.0",
-    "googleapis": "^20.0.1"
+    "googleapis": "^20.2.0"
   },
   "author": "Jeffrey Bodin",
   "license": "MIT"
