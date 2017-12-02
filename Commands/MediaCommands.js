@@ -40,51 +40,43 @@ var mediaResponses = function(client) {
         }
         if(message.content.toLowerCase() === 'high ground') {
             var randomNum = mediaObjects.mediaObject.highground.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.highground[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.highground[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'highground') {
             var randomNum = mediaObjects.mediaObject.highground.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.highground[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.highground[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'high_ground') {
             var randomNum = mediaObjects.mediaObject.highground.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.highground[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.highground[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'high' + 'ground') {
             var randomNum = mediaObjects.mediaObject.highground.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.highground[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.highground[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'star wars') {
             var randomNum = mediaObjects.mediaObject.starwars.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.starwars[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.starwars[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'prequel memes') {
             var randomNum = mediaObjects.mediaObject.starwars.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.starwars[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.starwars[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'dank wars') {
             var randomNum = mediaObjects.mediaObject.starwars.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.starwars[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.starwars[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'star memes') {
             var randomNum = mediaObjects.mediaObject.starwars.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.starwars[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.starwars[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'weeb') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
