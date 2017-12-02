@@ -23,7 +23,9 @@ var mediaObject = {
         10: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/e76.jpg',
         11: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/f5bc3zl.png',
         12: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/f90496b55bef5680b8f17f91ae9bc81101cd5e98f1d94e8437d6a5a9943b409f_3.jpg',
-        13: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/idontalwaysunderestimate-someones-power-but-when-do-i-cut-3-of-14932721.png'
+        13: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/idontalwaysunderestimate-someones-power-but-when-do-i-cut-3-of-14932721.png',
+        14: '',
+        15: '',
     }
     
 }
