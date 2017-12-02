@@ -38,6 +38,12 @@ var mediaResponses = function(client) {
                 file: mediaObjects.mediaObject.kizunaai.considerthefollowing
             });
         }
+        if(message.content.toLowerCase() === 'high ground') {
+            var randomNum = mediaObjects.mediaObject.highground.method();
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.highground[randomNum]
+            });
+        }
     });    
 }
 
