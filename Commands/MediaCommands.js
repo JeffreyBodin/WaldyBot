@@ -13,6 +13,66 @@ var mediaResponses = function(client) {
                 file: mediaObjects.mediaObject.kizunaai.considerthefollowing
             });
         }
+        if(message.content.toLowerCase() === 'kms') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'suicide') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'kill myself') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'kill me') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'kill you') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'suicided') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'ded') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'dead') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'de\'d') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'dead\'d') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'deaded') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
+        if(message.content.toLowerCase() === 'ded\'ed') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
+        }
         if(message.content.toLowerCase() === 'kill yourself') {
             message.channel.send('', {
                 file: mediaObjects.mediaObject.kizunaai.considerthefollowing
@@ -131,6 +191,76 @@ var mediaResponses = function(client) {
         if(message.content.toLowerCase() === 'itblaze') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
             message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'music') {
+            var randomNum = mediaObjects.mediaObject.music.method();
+            message.channel.send(mediaObjects.mediaObject.music[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'tunes') {
+            var randomNum = mediaObjects.mediaObject.music.method();
+            message.channel.send(mediaObjects.mediaObject.music[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'skeleton') {
+            var randomNum = mediaObjects.mediaObject.skeleton.method();
+            message.channel.send(mediaObjects.mediaObject.skeleton[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'spooky skeleton') {
+            var randomNum = mediaObjects.mediaObject.skeleton.method();
+            message.channel.send(mediaObjects.mediaObject.skeleton[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'spooky scary skeleton') {
+            var randomNum = mediaObjects.mediaObject.skeleton.method();
+            message.channel.send(mediaObjects.mediaObject.skeleton[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'spooky') {
+            var randomNum = mediaObjects.mediaObject.skeleton.method();
+            message.channel.send(mediaObjects.mediaObject.skeleton[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'overwatch') {
+            var randomNum = mediaObjects.mediaObject.overwatch.method();
+            message.channel.send(mediaObjects.mediaObject.overwatch[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'overmeme') {
+            var randomNum = mediaObjects.mediaObject.overwatch.method();
+            message.channel.send(mediaObjects.mediaObject.overwatch[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'over watch') {
+            var randomNum = mediaObjects.mediaObject.overwatch.method();
+            message.channel.send(mediaObjects.mediaObject.overwatch[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'dark souls') {
+            var randomNum = mediaObjects.mediaObject.darksouls.method();
+            message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'dank souls') {
+            var randomNum = mediaObjects.mediaObject.darksouls.method();
+            message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'dark souls') {
+            var randomNum = mediaObjects.mediaObject.darksouls.method();
+            message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'fashion souls') {
+            var randomNum = mediaObjects.mediaObject.darksouls.method();
+            message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'souls borne') {
+            var randomNum = mediaObjects.mediaObject.darksouls.method();
+            message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
             );
         }
     });    

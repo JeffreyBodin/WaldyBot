@@ -48,7 +48,42 @@ var mediaObject = {
         3: 'https://streamable.com/pvrbl',
         4: 'https://streamable.com/h3rk4',
         5: 'https://streamable.com/pl1vp'
-    }
+    },
+    music: {
+        method: function (){
+            var random = Math.ceil(Math.random() * 2);
+            //console.log(random);
+            return random;
+        },
+        1: 'https://streamable.com/23vdi', 
+        2: 'https://streamable.com/i24x3',
+    },
+    skeleton: {
+        method: function (){
+            var random = Math.ceil(Math.random() * 2);
+            //console.log(random);
+            return random;
+        },
+        1: 'https://streamable.com/3cww8',
+        2: 'https://streamable.com/htjvx'
+    },
+    overwatch: {
+        method: function (){
+            var random = Math.ceil(Math.random() * 1);
+            //console.log(random);
+            return random;
+        },
+        1: 'https://streamable.com/o9rz7',
+    },
+    darksouls: {
+        method: function (){
+            var random = Math.ceil(Math.random() * 2);
+            //console.log(random);
+            return random;
+        },
+        1: 'https://streamable.com/i7ugm', 
+        2: 'https://streamable.com/07rmw'
+    } 
 }
 
 var exportobject = {
