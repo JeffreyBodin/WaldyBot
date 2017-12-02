@@ -9,6 +9,7 @@ const pingCommand = require('./Commands/PingCommand.js');
 const coolAsciiFaceCommand = require('./Commands/CoolAsciiFaceCommand.js');
 const copyPastaCommand = require('./Commands/CopyPastaCommand.js');
 const youtubeCommand = require('./Commands/YoutubeCommand.js');
+const mediaCommand = require('./Commands/MediaCommands.js')
 const hook = new Discord.WebhookClient(); // placeholder
 
 process.setMaxListeners(100);
@@ -55,6 +56,9 @@ copyPastaCommand.copyPastaKeywordsPhrasesObject.copyPastaKeywordsPhrases(client)
 youtubeCommand.youtubeCmdObject.youtubeKeywordsPhrases(client);
 youtubeCommand.youtubeCmdObject.youtubeSearch(client);
 
+// Responses:
+// Placeholder for Auto-Responses
+mediaCommand.mediaResponsesObject.mediaResponses(client);
 
 // Webhooks TestCmds
 client.on('message', message => {
@@ -64,4 +68,4 @@ client.on('message', message => {
 });
 ///asdasdasdsa
 // WaldyBot Login Token Goes Here: For local testing use authTokenBeta.
-client.login(authToken);
+client.login(authTokenBeta);
