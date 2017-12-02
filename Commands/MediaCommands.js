@@ -9,24 +9,34 @@ message.channel.send("some text", {
 var mediaResponses = function(client) {
     client.on('message', message => {
         if(message.content.toLowerCase() === 'kys') {
-            message.channel.send('',{
-
-            } mediaObjects.mediaObject.kizunaai.considerthefollowing);
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
         }
         if(message.content.toLowerCase() === 'kill yourself') {
-            message.channel.send(mediaObjects.mediaObject.kizunaai.considerthefollowing);
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
         }
         if(message.content.toLowerCase() === 'die') {
-            message.channel.send(mediaObjects.mediaObject.kizunaai.considerthefollowing);
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
         }
         if(message.content.toLowerCase() === 'kill') {
-            message.channel.send(mediaObjects.mediaObject.kizunaai.considerthefollowing);
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
         }
         if(message.content.toLowerCase() === ':skull:') {
-            message.channel.send(mediaObjects.mediaObject.kizunaai.considerthefollowing);
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
         }
         if(message.content.toLowerCase() === ':skull_crossbones:') {
-            message.channel.send(mediaObjects.mediaObject.kizunaai.considerthefollowing);
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.considerthefollowing
+            });
         }
     });    
 }

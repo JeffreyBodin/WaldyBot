@@ -3,10 +3,7 @@ const fs = require('fs');
 
 var mediaObject = {
     kizunaai: {
-        considerthefollowing: fs.readFile('./kizunaai_considerthefollowing.jpg', function(data){
-            return data;
-        }),
-        //considerthefollowing2: fs.link('./kizunaai_considerthefollowing.jpg', './kizunaai_considerthefollowing.jpg')
+        considerthefollowing: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/testbuild/Objects/Media%20Storage/kizunaai_considerthefollowing.jpg'
     },
     
 }
