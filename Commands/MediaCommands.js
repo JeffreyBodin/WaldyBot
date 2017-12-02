@@ -88,63 +88,58 @@ var mediaResponses = function(client) {
         }
         if(message.content.toLowerCase() === 'weeb') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('Did you mean weed?', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'weebs') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('Did you mean weed?', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'weed') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('weed?', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'dank weed') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('weed?', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'cush') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('weed?', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'snoop') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'snoop dog') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === '420') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'blaze it') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
         if(message.content.toLowerCase() === 'blaze') {
             var randomNum = mediaObjects.mediaObject.snoopdog.method();
-            message.channel.send('', {
-                file: mediaObjects.mediaObject.snoopdog[randomNum]
-            });
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
+        }
+        if(message.content.toLowerCase() === 'itblaze') {
+            var randomNum = mediaObjects.mediaObject.snoopdog.method();
+            message.channel.send(mediaObjects.mediaObject.snoopdog[randomNum]
+            );
         }
     });    
 }
