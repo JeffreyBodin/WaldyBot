@@ -5,6 +5,9 @@ var mediaObject = {
     kizunaai: {
         considerthefollowing: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/testbuild/Objects/Media%20Storage/kizunaai_considerthefollowing.jpg'
     },
+    highground: {
+        
+    }
     
 }
 
