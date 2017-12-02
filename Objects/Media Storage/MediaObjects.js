@@ -13,7 +13,7 @@ var mediaObject = {
         },
         1: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/0ae.png',
         2: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/441.jpg',
-        3: 'https://github.com/JeffreyBodin/WaldyBot/blob/master/Objects/Media%20Storage/HighGround/60e.jpg',
+        3: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/60e.jpg',
         4: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/6d94a3fe3837f590959bac9084c6379de5e6f10e9427c43e2e3cd0eac9f31429_3.jpg',
         5: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/6eb.png',
         6: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/master/Objects/Media%20Storage/HighGround/911.jpg',
