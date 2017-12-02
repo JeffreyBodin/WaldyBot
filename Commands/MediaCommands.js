@@ -248,11 +248,6 @@ var mediaResponses = function(client) {
             message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
             );
         }
-        if(message.content.toLowerCase() === 'dark souls') {
-            var randomNum = mediaObjects.mediaObject.darksouls.method();
-            message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
-            );
-        }
         if(message.content.toLowerCase() === 'fashion souls') {
             var randomNum = mediaObjects.mediaObject.darksouls.method();
             message.channel.send(mediaObjects.mediaObject.darksouls[randomNum]
