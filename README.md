@@ -19,7 +19,7 @@ WaldyBot OAuth Link: [Here](https://discordapp.com/api/oauth2/authorize?client_i
 This adds a instance of WaldyBot with no pre-existing permissions or roles. 
 
 Roles and permissions may be added manually at the discretion of the server administrator.
-As of WaldyBot v1.1.1 there are no required permissions or roles.
+As of WaldyBot v1.1.2 there are no required permissions or roles.
 
 ---
 ## Customization
