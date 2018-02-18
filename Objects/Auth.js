@@ -10,8 +10,8 @@ function discordServerAuthenticate(client_id, username) {
 // Objects
 // Discord Token Object
 var discordTokensObject = {
-    DiscordToken: '', // Your Auth Token Goes HERE <------------
-    DiscordTokenBeta: '' // Your local/testing bot's auth token goes HERE <------------ 
+    DiscordToken: '', // Your Auth Token (String) Goes HERE <------------
+    DiscordTokenBeta: '' // Your local/testing bot's auth (string) token goes HERE <------------ 
 }
 // WaldyBot User Objects
 var waldyBot = {

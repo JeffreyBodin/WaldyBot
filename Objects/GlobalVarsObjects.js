@@ -1,13 +1,19 @@
-const authFile = require('./Auth.js');
-const helpObjs = require('./HelpObjects.js');
-const asciiObjs = require('./ASCIIObjects.js');
-const copyPastaObjs = require('./CopyPastaObjects.js');
-const youtubeObjs = require('./YoutubeObjects.js');
+// Clears Node Module Cache
+function requireUncached(module){
+    delete require.cache[require.resolve(module)]
+    return require(module)
+  }
+
+var authFile = require('./Auth.js');
+var helpObjs = require('./HelpObjects.js');
+var asciiObjs = require('./ASCIIObjects.js');
+var copyPastaObjs = require('./CopyPastaObjects.js');
+var youtubeObjs = require('./YoutubeObjects.js');
 
 
 // Global Vars
-const waldyBot = authFile.waldyBot;
-const waldyBotBeta = authFile.waldyBotBeta;
+var waldyBot = authFile.waldyBot;
+var waldyBotBeta = authFile.waldyBotBeta;
 
 // Command Vars + Command Var's Help Descriptions
 var cmdHelp = helpObjs.cmdVarObject.cmdHelp;

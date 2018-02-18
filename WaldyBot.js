@@ -1,21 +1,17 @@
-function requireUncached(module){
-  delete require.cache[require.resolve(module)]
-  return require(module)
-}
-
-const Discord = requireUncached('discord.js');
-const client = new Discord.Client();
-const richEmbed = new Discord.RichEmbed({ });
-const fs = require('fs');
-const globalVarsObjs = requireUncached('./Objects/GlobalVarsObjects.js');
-const helpCommand = requireUncached('./Commands/HelpCommand.js');
-const setupCommand = requireUncached('./Commands/SetupCommand.js');
-const pingCommand = requireUncached('./Commands/PingCommand.js');
-const coolAsciiFaceCommand = requireUncached('./Commands/CoolAsciiFaceCommand.js');
-const copyPastaCommand = requireUncached('./Commands/CopyPastaCommand.js');
-const youtubeCommand = requireUncached('./Commands/YoutubeCommand.js');
-const mediaCommand = requireUncached('./Commands/MediaCommands.js')
-const hook = new Discord.WebhookClient(); // placeholder
+// Imported Node Modules
+var Discord = require('discord.js');
+var client = new Discord.Client();
+var richEmbed = new Discord.RichEmbed({ });
+var fs = require('fs');
+var globalVarsObjs = require('./Objects/GlobalVarsObjects.js');
+var helpCommand = require('./Commands/HelpCommand.js');
+var setupCommand = require('./Commands/SetupCommand.js');
+var pingCommand = require('./Commands/PingCommand.js');
+var coolAsciiFaceCommand = require('./Commands/CoolAsciiFaceCommand.js');
+var copyPastaCommand = require('./Commands/CopyPastaCommand.js');
+var youtubeCommand = require('./Commands/YoutubeCommand.js');
+var mediaCommand = require('./Commands/MediaCommands.js')
+var hook = new Discord.WebhookClient(); // placeholder
 
 process.setMaxListeners(100);
 client.setMaxListeners(100);
