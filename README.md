@@ -33,3 +33,17 @@ WaldyBot is preconfigured to work with Heroku's free Dyno service. Setup is as f
     - Connect your forked WaldyBot release as the deployment method. Automatic deployment from your repostiory is optional, but useful feature.
 5. Make changes to your repository to suit your indivdual servers needs. Update/Merge with WaldyBot's master branch as needed.
 
+---
+## Contact Information
+
+WaldyBot's Official Discord [Dev Server](https://discord.gg/bpc6cYg) 
+Use the discord server to report bugs, suggest changes and feature requests. Or, contact me on GitHub through:
+    - [New Pull Requests](https://github.com/JeffreyBodin/WaldyBot/pulls)
+    - [New Issues](https://github.com/JeffreyBodin/WaldyBot/issues)
+
+For any/all other contact needs message me on discord: waldy713#1468
+
+---
+## Liscense
+See the [LICENSE](https://github.com/JeffreyBodin/WaldyBot/blob/master/LICENSE).
+Liscensed under MIT License Copyright (c) 2017 Jeffrey Bodin. 
