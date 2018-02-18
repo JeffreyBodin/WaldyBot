@@ -1,5 +1,11 @@
+# This is the Heroku Slug Compiler Ignore File
+# See Heroku documentation for more info: https://devcenter.heroku.com/articles/slug-compiler
 *.jpg
 *.png
 *.mp4
 *.mp3
 *.gif
+.Objects/Media Storage
+.Media Storage
+/Objects/Media Storage
+/Media Storage
