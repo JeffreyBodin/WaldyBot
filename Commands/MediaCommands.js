@@ -1,4 +1,4 @@
-const mediaObjects = require('../Objects/Media Storage/MediaObjects.js');
+const mediaObjects = require('../Objects/MediaObjects.js');
 
 /*
 message.channel.send("some text", {
