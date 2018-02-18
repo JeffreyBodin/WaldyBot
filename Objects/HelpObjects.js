@@ -15,11 +15,7 @@ var cmdYoutubeHelp = 'w yt\n\t ' + 'Returns Youtube videos.\n\t ' + 'Cmd is modi
 var cmdLinks = 'Links:\n\t ' + 'GitHub: https://github.com/JeffreyBodin/WaldyBot\n\t ' + 'Website: https://jeffreybodin.github.io/WaldyBot';
 var cmdContactInformation = 'Contact Information:\n\t ' + 'Official Discord Server: https://discord.gg/bpc6cYg\n\t ' + 'For any/all other contact needs message me on discord: waldy713#1468';
 // Help Files
-<<<<<<< HEAD
-var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdSetUpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + cmdCopyPastaHelp + '\n ' + cmdYoutubeHelp + '\n ' + cmdLinks + '\n ' + cmdContactInformation + '\n ' + '```';
-=======
-var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdSetUpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + cmdCopyPastaHelp + '\n ' + '\n ' + cmdLinks + '\n ' + cmdContactInformation + '\n ' + '```';
->>>>>>> testbuild
+var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdSetUpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + cmdCopyPastaHelp + '\n ' + cmdLinks + '\n ' + cmdContactInformation + '\n ' + '```';
 var setUpFile = '```javascript\n' + '// This is my setup information.\n ' + 'All commands are prefixed by a \'w\' and a single space along with setup keyword.\n ' + cmdSetUpHelp  + '\n ' + cmdSetUpInstallHelp + '\n ' + '```';
 
 // Objects
