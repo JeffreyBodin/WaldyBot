@@ -1,5 +1,5 @@
 const authFile = require('./Auth.js');
-const helpObjs = require('./HelpObjects.js');
+// const helpObjs = require('./HelpObjects.js');
 const asciiObjs = require('./ASCIIObjects.js');
 const copyPastaObjs = require('./CopyPastaObjects.js');
 const youtubeObjs = require('./YoutubeObjects.js');
