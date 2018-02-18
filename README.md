@@ -13,7 +13,7 @@ WaldyBot comes with automated responses out of the box with no prior hosting or 
 
 Use the below OAuth Link to authenticate and add WaldyBot to your server.
 
-WaldyBot OAuth Link: [Here](https://discordapp.com/api/oauth2/authorizeclient_id=328236947820773386&permissions=0&scope=bot)
+WaldyBot OAuth Link: [Here](https://discordapp.com/api/oauth2/authorize?client_id=328236947820773386&permissions=0&scope=bot)
 
 
 This adds a instance of WaldyBot with no pre-existing permissions or roles. Roles and permissions may be added manually at the discretion of the server administrator.
