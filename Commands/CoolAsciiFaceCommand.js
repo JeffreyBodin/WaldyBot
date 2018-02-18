@@ -3,13 +3,14 @@ const globalVarsObjs = require('../Objects/GlobalVarsObjects.js');
 
 
 var cmdCoolAscii = globalVarsObjs.commandVarObject.cmdCoolAscii;
+var cmdCoolAsciiHelp = globalVarsObjs.commandVarObject.cmdCoolAsciiHelp;
 var asciiObjs = globalVarsObjs.otherObject.asciiObjs;
 
 // Ascii Responses
 // Cool-Ascii-Face Randomized
 var coolAsciiRandomized = function(client){
     client.on('message', message => {
-        if(message.content.toLowerCase() === cmdCoolAscii) {
+        if(message.content.toLowerCase() === cmdCoolAscii + 'random') {
             message.channel.send(coolAscii());
         } 
     });
@@ -17,6 +18,9 @@ var coolAsciiRandomized = function(client){
 // Cool-Ascii-Face Keywords/Phrases
 var coolAsciiKeywordsPhrases = function(client) {
     client.on('message', message => {
+        if(message.content.toLowerCase() === cmdCoolAscii + ' ' + 'help') {
+            message.channel.send(cmdCoolAsciiHelp);
+        }
         if(message.content.toLowerCase() === cmdCoolAscii + ' ' + message.mentions.users.first()) {
             message.mentions.users.first().createDM(message.mentions.users.first().send(coolAscii()));
         }

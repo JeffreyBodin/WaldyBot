@@ -10,6 +10,11 @@ var waldyBotAuthUrl = globalVarsObjs.authenticationObject.waldyBotAuthUrl;
 var setUpResponsesMethod = function(client) {
     client.on('message', message => {
         if(message.content.toLowerCase() === cmdSetUp) {
+            message.author.createDM(message.author.send(waldyBotAuthUrl));
+        }
+    });
+    client.on('message', message => {
+        if(message.content.toLowerCase() === cmdSetUp + ' ' + 'help') {
             message.author.createDM(message.author.send(setUpFile));
         }
     });
