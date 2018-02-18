@@ -1,15 +1,20 @@
-const Discord = require('discord.js');
+function requireUncached(module){
+  delete require.cache[require.resolve(module)]
+  return require(module)
+}
+
+const Discord = requireUncached('discord.js');
 const client = new Discord.Client();
 const richEmbed = new Discord.RichEmbed({ });
 const fs = require('fs');
-const globalVarsObjs = require('./Objects/GlobalVarsObjects.js');
-const helpCommand = require('./Commands/HelpCommand.js');
-const setupCommand = require('./Commands/SetupCommand.js');
-const pingCommand = require('./Commands/PingCommand.js');
-const coolAsciiFaceCommand = require('./Commands/CoolAsciiFaceCommand.js');
-const copyPastaCommand = require('./Commands/CopyPastaCommand.js');
-const youtubeCommand = require('./Commands/YoutubeCommand.js');
-const mediaCommand = require('./Commands/MediaCommands.js')
+const globalVarsObjs = requireUncached('./Objects/GlobalVarsObjects.js');
+const helpCommand = requireUncached('./Commands/HelpCommand.js');
+const setupCommand = requireUncached('./Commands/SetupCommand.js');
+const pingCommand = requireUncached('./Commands/PingCommand.js');
+const coolAsciiFaceCommand = requireUncached('./Commands/CoolAsciiFaceCommand.js');
+const copyPastaCommand = requireUncached('./Commands/CopyPastaCommand.js');
+const youtubeCommand = requireUncached('./Commands/YoutubeCommand.js');
+const mediaCommand = requireUncached('./Commands/MediaCommands.js')
 const hook = new Discord.WebhookClient(); // placeholder
 
 process.setMaxListeners(100);
