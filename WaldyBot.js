@@ -68,4 +68,4 @@ client.on('message', message => {
 });
 
 // WaldyBot Login Token Goes Here: For local testing use authTokenBeta.
-client.login(); // Your Auth Token Goes HERE <------------
+client.login(); // Your Auth Token (String) Goes HERE <------------

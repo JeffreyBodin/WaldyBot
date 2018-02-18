@@ -1,6 +1,6 @@
 {
   "name": "WaldyBot",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "WaldyBot",
   "main": "WaldyBot.js",
   "scripts": {

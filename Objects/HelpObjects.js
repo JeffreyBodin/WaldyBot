@@ -12,9 +12,10 @@ var cmdCopyPasta = 'w ' + 'copypasta';
 var cmdCopyPastaHelp = 'w copypasta\n\t ' + 'Returns copypastas.\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: im syliris';
 var cmdYoutube = 'w ' + 'yt';
 var cmdYoutubeHelp = 'w yt\n\t ' + 'Returns Youtube videos.\n\t ' + 'Cmd is modified with postfixed keywords/phrases following a single space.\n\t ' + 'Keywords: s, boneless pizza\n\t ' + 'To search youtube enter postfixed query following the s keyword and a single space.';
-
+var cmdLinks = 'Links:\n\t ' + 'GitHub: https://github.com/JeffreyBodin/WaldyBot\n\t ' + 'Website: https://jeffreybodin.github.io/WaldyBot';
+var cmdContactInformation = 'Contact Information:\n\t ' + 'Official Discord Server: https://discord.gg/bpc6cYg\n\t ' + 'For any/all other contact needs message me on discord: waldy713#1468';
 // Help Files
-var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdSetUpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + cmdCopyPastaHelp + '\n ' + cmdYoutubeHelp + '\n ' + '```';
+var helpFile = '```javascript\n' + '// This is my command list.\n ' + 'All commands are prefixed by a \'w\' and a single space.\n ' + cmdHelpHelp + '\n ' + cmdSetUpHelp + '\n ' + cmdPingHelp + '\n ' + cmdCoolAsciiHelp + '\n ' + cmdCopyPastaHelp + '\n ' + cmdYoutubeHelp + '\n ' + '\n ' + cmdLinks + '\n ' + cmdContactInformation + '\n ' + '```';
 var setUpFile = '```javascript\n' + '// This is my setup information.\n ' + 'All commands are prefixed by a \'w\' and a single space along with setup keyword.\n ' + cmdSetUpHelp  + '\n ' + cmdSetUpInstallHelp + '\n ' + '```';
 
 // Objects
