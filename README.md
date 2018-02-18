@@ -8,6 +8,8 @@ The premier Ai Memes Merchant for the Discord platform.
 
 WaldyBot comes with automated responses out of the box with no prior hosting or setup required. Just add/invite to your server and your ready to go.
 
+[Latest Release](https://github.com/JeffreyBodin/WaldyBot/releases/latest) 
+
 ---
 ## Setup
 
