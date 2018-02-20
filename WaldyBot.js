@@ -62,7 +62,9 @@ youtubeCommand.youtubeCmdObject.youtubeSearch(client);
 
 // Responses:
 // Placeholder for Auto-Responses
+mediaCommand.mediaResponsesObject.onJoin(client);
 mediaCommand.mediaResponsesObject.mediaResponses(client);
+mediaCommand.mediaResponsesObject.waldyBotMentionsResponses(client);
 
 // Webhooks TestCmds
 client.on('message', message => {
@@ -72,4 +74,4 @@ client.on('message', message => {
 });
 
 // WaldyBot Login Token Goes Here: NEVER commmit your WaldyBot's Login Token to public Git/GitHub/Source Control.
-client.login(); // Your Discord Bot's Auth Token (String) Goes HERE <------------
+client.login(authTokenBeta); // Your Discord Bot's Auth Token (String) Goes HERE <------------
