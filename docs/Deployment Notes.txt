@@ -1,0 +1,15 @@
+// Notes: Custom Instance/Deployment of WaldyBot
+// NEVER commmit your WaldyBot's Login Token to public Git/GitHub/Source Control.
+// Your bot may be hijacked if the login token is leaked.
+
+// Heroku w/Github Deployment
+// Heroku with a PUBLIC GitHub deployment setup (from forked repository). Use Heroku CLI for final live deployment of login token.
+// Heroku with a PRIVATE GitHub deployment setup (from forked repository). You may commit everything and deploy from that repository.
+
+// WaldyBot (Your bot) 
+// Fork from WaldyBot Repository, follow installation instructions found in README.md
+// Used for live deployment of your instance of WaldyBot. (NOTE: Is entirely optional. For regular OAuth method follow instructions in README.md)
+
+// WaldyBot Beta (Your testing bot.)
+// This is a SEPERATE bot for local testing purposes.
+// For local testing use your testing bot's Auth Token.
