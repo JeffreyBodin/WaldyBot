@@ -15,9 +15,9 @@ var helpFileResponsesObjectMethod = function(client) {
         if(message.content.toLowerCase() === cmdHelp + 'test') {
             message.author.createDM(message.author.send('this is a TEST'));
         };
-        if (message.isMemberMentioned(waldyBot) === true) { 
-            message.author.createDM(message.author.send(helpFile));
-        };
+        //if (message.isMemberMentioned(waldyBot) === true) { 
+        //    message.author.createDM(message.author.send(helpFile));
+        //};
         if (message.isMemberMentioned(waldyBotBeta) === true) { 
             message.author.createDM(message.author.send(helpFile));
         };
