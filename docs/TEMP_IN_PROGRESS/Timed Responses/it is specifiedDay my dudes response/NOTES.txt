@@ -1,0 +1,22 @@
+TO DO - 11/21/18
+
+Create responses called by a specified UTC time elapsing on a set weekly (corresponding to the day) time. 
+Uses the included pictures for each planned interval. 
+	See specified, named, day for corresponding picture's assigned weekly interval.
+
+Tuesday 
+	Planned for a png of Zero Two "002, Iota". 
+		Referencing quote on quote "Zero Twosday".
+	For Zero Two reference see: https://myanimelist.net/character/155679/Zero_Two?q=zero%20two
+	Path: WaldyBot\Objects\TEMP_IN_PROGRESS\Timed Responses\it is specifiedDay my dudes response\Darling in the Franxx - zero two ass says zero twosday.png
+Wednesday
+	Planned for a png of Tsuyu "Froppy" Asui.
+		Depicts her alongside traditional "it is wednesday, my dudes" frog meme. Ie she is the depicted frog.
+	For Tsuyu "Froppy" Asui referencing see: https://myanimelist.net/character/119209/Tsuyu_Asui?q=Tsuyu%20Asui
+	Path: WaldyBot\Objects\TEMP_IN_PROGRESS\Timed Responses\it is specifiedDay my dudes response\it is wednesday my dudes.png
+Saturday
+	Planned for a png of Sekkekkyuu AE3803/Red Blood Cell.
+		A variation on the previously stated "it is wednesday, my dudes" Tsuyu version frog meme. 
+		Red Blood Cell replaces Tsuyu as the "frog" within this depiction.
+	For Red Blood Cell referencing see: https://myanimelist.net/character/142628/Sekkekkyuu_AE3803
+	Path: WaldyBot\Objects\TEMP_IN_PROGRESS\Timed Responses\it is specifiedDay my dudes response\it is saturday my dudes.jpg
