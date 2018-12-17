@@ -46,7 +46,7 @@ Use the discord server to report bugs, suggest changes and feature requests. Or,
 - [New Pull Requests](https://github.com/JeffreyBodin/WaldyBot/pulls)
 - [New Issues](https://github.com/JeffreyBodin/WaldyBot/issues)
 
-For any/all other contact needs message me on discord: waldy713#1468
+For any/all other contact needs message me on discord: waldy#1468
 
 ---
 ## Liscense
