@@ -74,4 +74,11 @@ client.on('message', message => {
 });
 
 // WaldyBot Login Token Goes Here: NEVER commmit your WaldyBot's Login Token to public Git/GitHub/Source Control.
-client.login(authTokenBeta); // Your Discord Bot's Auth Token (String) Goes HERE <------------
+  // Note on Pre-Made/Integrated Vars 
+    // Vars: authToken, authTokenBeta
+      // Path of vars is /Objects/Auth.js
+      // User can edit/add their bot's token in this file. For full future-proof integration. 
+      // No need to re-authenticate/generate the bot's token.  
+    // For ALL Users: "authToken" = Your bot's auth token string.
+    // For Dev Users: "authTokenBeta" = Local testing instance bot's token. 
+client.login(authToken); // Your Discord Bot's Auth Token (String) Goes HERE <------------
