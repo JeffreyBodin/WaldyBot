@@ -1,11 +1,31 @@
 const mediaObjects = require('../Objects/MediaObjects.js');
+const globalVarsObjs = require('../Objects/GlobalVarsObjects.js');
 
-/*
-message.channel.send("some text", {
-    file: "http://link.to/your.file" // Or replace with FileOptions object
-});
-*/
 
+var waldyBot = globalVarsObjs.globalVarObject.waldyBot;
+var waldyBotBeta = globalVarsObjs.globalVarObject.waldyBotBeta;
+
+// On Join (Discord Server) ## Under Construction ##
+var onJoin = function(client) {
+    // On WaldyBot Join
+    client.on('message', message => {
+        if(message.content.toLowerCase() === 'kys') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.appear
+            });
+        }
+    });
+    // On New User Join
+    client.on('message', message => {
+        if(message.content.toLowerCase() === 'kys') {
+            message.channel.send('', {
+                file: mediaObjects.mediaObject.kizunaai.yournotallowedtoleave
+            });
+        }
+    });    
+}
+
+// General Media Responses
 var mediaResponses = function(client) {
     client.on('message', message => {
         if(message.content.toLowerCase() === 'kys') {
@@ -261,9 +281,31 @@ var mediaResponses = function(client) {
     });    
 }
 
+// WaldyBot @mentions Responses # Under Construction #
+var waldyBotMentionsResponses = function(client) {
+    client.on('message', message => {
+        if ((message.isMemberMentioned(waldyBot) === true) || (message.content.toLowerCase().split(' ') === 'hi')) { 
+            message.author.createDM(message.author.send('this is a TEST'));
+        };
+        if (message.content.toLowerCase().split(' ').forEach(string => {
+                let x = 0;
+                if (string === 'hi') {
+                    return x++;
+                }
+                console.log(string);
+                console.log(x);
+                return x;
+        }) > 0) { 
+            message.author.createDM(message.author.send('this is a TEST'));
+        };
+    });
+}
+
 // Objects
 var mediaResponsesObject = {
-    mediaResponses: mediaResponses 
+    mediaResponses: mediaResponses,
+    onJoin: onJoin,
+    waldyBotMentionsResponses: waldyBotMentionsResponses 
 }
 
 var exportobject = {

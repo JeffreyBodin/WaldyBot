@@ -1,0 +1,12 @@
+// To Do List
+Create @WaldyBot responses.
+Create better parsing of strings for the key words and phrase. 
+    To better trigger responses.
+Joining Picture   
+    On joining a discord server post '*appear*' picture in general.
+    Picture located in Objects/Media Storage/KizunaAi/kizuna_ai_appear.jpg
+    Use direct link from github.
+Welcome Picture
+    On a new user joining discord server post 'your not allowed to leave' picture in general.
+    Located in Objects/Media Storage/KizunaAi/kizuna_ai_yournotallowedtoleave.png
+    Use direct link from GitHub.
