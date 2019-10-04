@@ -3,7 +3,9 @@ const fs = require('fs');
 
 var mediaObject = {
     kizunaai: {
-        considerthefollowing: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/testbuild/Objects/Media%20Storage/KizunaAi/kizunaai_considerthefollowing.jpg'
+        considerthefollowing: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/testbuild/Objects/Media%20Storage/KizunaAi/kizunaai_considerthefollowing.jpg',
+        appear: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/testbuild/Objects/Media%20Storage/KizunaAi/kizuna_ai_appear.jpg',
+        yournotallowedtoleave: 'https://raw.githubusercontent.com/JeffreyBodin/WaldyBot/testbuild/Objects/Media%20Storage/KizunaAi/kizuna_ai_yournotallowedtoleave.png'
     },
     highground: {
         method: function (){
