@@ -24,10 +24,11 @@ var waldyBotVersion = packageJson["version"];
 // See end of program for placement.
 const authToken = globalVarsObjs.authenticationObject.authToken; // WaldyBot
 const authTokenBeta = globalVarsObjs.authenticationObject.authTokenBeta; // WaldyBot Beta
+const authTokenBetaTestFile = globalVarsObjs.authenticationObject.authTokenBetaTestFile; // TestFile's WaldyBot Beta Integration
 
 
 // Startup
-client.on('ready', () => {
+client.once('ready', () => {
   console.log('v' + waldyBotVersion);
   console.log('Ready....'); 
 }
@@ -36,8 +37,13 @@ client.on('ready', () => {
 // WaldyBot's Current Game
 var botIsPlaying = 'w help';
 
-client.on('ready', () => {
+client.once('ready', () => {
   client.user.setGame(botIsPlaying);
+}
+);
+// Log's
+client.on('message', message => {
+	console.log(message.content);
 }
 );
 
@@ -80,5 +86,6 @@ client.on('message', message => {
       // User can edit/add their bot's token in this file. For full future-proof integration. 
       // No need to re-authenticate/generate the bot's token.  
     // For ALL Users: "authToken" = Your bot's auth token string.
-    // For Dev Users: "authTokenBeta" = Local testing instance bot's token. 
+    // For Dev Users: "authTokenBeta" = Local testing instance bot's token.
+      // Also Dev: "authTokenBetaTestFile" = .gitignore testing integration bot's token.
 client.login(authToken); // Your Discord Bot's Auth Token (String) Goes HERE <------------

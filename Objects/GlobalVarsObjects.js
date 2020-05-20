@@ -9,7 +9,7 @@ var helpObjs = require('./HelpObjects.js');
 var asciiObjs = require('./ASCIIObjects.js');
 var copyPastaObjs = require('./CopyPastaObjects.js');
 var youtubeObjs = require('./YoutubeObjects.js');
-
+var testFile = require('../test')
 
 // Global Vars
 var waldyBot = authFile.waldyBot;
@@ -38,6 +38,7 @@ var setUpFile = helpObjs.helpFilesObject.setUpFile;
 var waldyBotAuthUrl = authFile.waldyBotAuthUrlObj.waldyBotAuthUrlString;
 var authToken = authFile.discordTokensObject.DiscordToken; // WaldyBot
 var authTokenBeta = authFile.discordTokensObject.DiscordTokenBeta; // WaldyBot Beta
+var authTokenTestFile = testFile.discordTokensObject.DiscordTokenBeta_Alpha;
 
 // Objects
 var globalVarObject = {
@@ -59,7 +60,8 @@ var otherObject = {
 var authenticationObject = {
     waldyBotAuthUrl: waldyBotAuthUrl,
     authToken: authToken,
-    authTokenBeta: authTokenBeta
+    authTokenBeta: authTokenBeta,
+    authTokenBetaTestFile: authTokenTestFile
 }
 
 var commandVarObject = {
