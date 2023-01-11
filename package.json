@@ -12,7 +12,7 @@
     "discord.js": "^11.2.1",
     "google-cloud": "^0.56.0",
     "googleapis": "^39.1.0",
-    "node-pre-gyp": "^0.6.39"
+    "node-pre-gyp": "^0.17.0"
   },
   "author": "Jeffrey Bodin",
   "license": "MIT"
